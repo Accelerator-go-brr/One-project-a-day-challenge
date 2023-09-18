@@ -1,0 +1,28 @@
+import random
+def startTheGame():
+    Number = random.randint(1,100)
+    print(Number)
+    InputThing(Number)
+    
+
+
+def InputThing(Number):
+    Player = int(input("Please enter num \n"))
+    try:
+        if Player == Number:
+            choice1 = input("you win, wanna play again?  Y or N ").upper()
+            if choice1 == "Y":
+                startTheGame()
+            else:
+                exit()     
+        elif Player > Number:
+            print("lower")
+            InputThing(Number)
+        elif Player < Number:
+            print("higher")
+            InputThing(Number)
+    except ValueError:
+        print("a number stupid")
+        InputThing(Number)
+
+startTheGame()
