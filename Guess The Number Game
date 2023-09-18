@@ -1,7 +1,7 @@
 import random
 def startTheGame():
     Number = random.randint(1,100)
-    print(Number)
+    #print(Number) was use for debugging
     InputThing(Number)
     
 
